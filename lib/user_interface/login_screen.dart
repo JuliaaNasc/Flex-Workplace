@@ -1,6 +1,8 @@
 import 'package:flex_workplace/user_interface/main_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'forgot_password.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -43,11 +45,17 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             const SizedBox(height: 10),
-            TextField(
-              decoration: InputDecoration(
-                fillColor: Colors.green,
-                filled: true,
-                isDense: true,
+            SizedBox(
+              height: 35,
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Digite seu e-mail aqui...',
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8)),
+                  fillColor: Colors.green,
+                  filled: true,
+                  isDense: true,
+                ),
               ),
             ),
             const SizedBox(height: 20),
@@ -60,19 +68,32 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             const SizedBox(height: 10),
-            TextField(
-              decoration: InputDecoration(
-                fillColor: Colors.green,
-                filled: true,
-                isDense: true,
+            SizedBox(
+              height: 35,
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Digite a sua senha aqui...',
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8)),
+                  fillColor: Colors.green,
+                  filled: true,
+                  isDense: true,
+                ),
               ),
             ),
-            Text(
-              'Esqueceu sua senha?',
-              style: TextStyle(
-                fontFamily: 'Montserrat',
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (c) {
+                  return const ForgotPassword();
+                }));
+              },
+              child: Text(
+                'Esqueceu sua senha?',
+                style: TextStyle(
+                  fontFamily: 'Montserrat',
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             const SizedBox(height: 70),
