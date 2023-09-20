@@ -1,3 +1,4 @@
+import 'package:flex_workplace/user_interface/components/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
 import 'main_screen.dart';
@@ -45,19 +46,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   ),
                 ),
                 const SizedBox(height: 0),
-                SizedBox(
-                  height: 35,
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Digite seu e-mail aqui...',
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8)),
-                      fillColor: Colors.green,
-                      filled: true,
-                      isDense: true,
-                    ),
-                  ),
-                ),
+                CustomTextField(hint: 'Digite seu e-mail aqui...'),
                 const SizedBox(height: 20),
                 Text(
                   'Qual sua cor favorita? (Pergunta de segurança)',
@@ -68,19 +57,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   ),
                 ),
                 const SizedBox(height: 0),
-                SizedBox(
-                  height: 35,
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Digite aqui a sua resposta de segurança...',
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8)),
-                      fillColor: Colors.green,
-                      filled: true,
-                      isDense: true,
-                    ),
-                  ),
-                ),
+               CustomTextField(hint: 'Digite aqui a sua resposta de segurança...'),
                 const SizedBox(height: 20),
                 Text(
                   'Digite sua nova senha',
@@ -91,19 +68,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   ),
                 ),
                 const SizedBox(height: 0),
-                SizedBox(
-                  height: 35,
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Digite a sua nova senha aqui...',
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8)),
-                      fillColor: Colors.green,
-                      filled: true,
-                      isDense: true,
-                    ),
-                  ),
-                ),
+                CustomTextField(hint: 'Digite aqui a sua nova senha...'),
                 const SizedBox(height: 20),
                 Text(
                   'Confirme a sua nova senha definida',
@@ -114,19 +79,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   ),
                 ),
                 const SizedBox(height: 0),
-                SizedBox(
-                  height: 35,
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Digite sua confirmação de senha aqui...',
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8)),
-                      fillColor: Colors.green,
-                      filled: true,
-                      isDense: true,
-                    ),
-                  ),
-                ),
+               CustomTextField(hint: 'Digite a sua confirmação de senha aqui...'),
                 const SizedBox(height: 20),
                 const SizedBox(height: 50),
                 ElevatedButton(

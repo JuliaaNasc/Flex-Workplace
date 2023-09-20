@@ -1,3 +1,4 @@
+import 'package:flex_workplace/user_interface/components/custom_text_field.dart';
 import 'package:flex_workplace/user_interface/main_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -45,19 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             const SizedBox(height: 10),
-            SizedBox(
-              height: 35,
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'Digite seu e-mail aqui...',
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8)),
-                  fillColor: Colors.green,
-                  filled: true,
-                  isDense: true,
-                ),
-              ),
-            ),
+          CustomTextField(hint: 'Digite seu e-mail aqui...'),
             const SizedBox(height: 20),
             Text(
               'Digite sua senha',
@@ -68,19 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             const SizedBox(height: 10),
-            SizedBox(
-              height: 35,
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'Digite a sua senha aqui...',
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8)),
-                  fillColor: Colors.green,
-                  filled: true,
-                  isDense: true,
-                ),
-              ),
-            ),
+           CustomTextField(hint: 'Digite a sua senha aqui...'),
             GestureDetector(
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (c) {

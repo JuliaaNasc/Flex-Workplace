@@ -1,3 +1,4 @@
+import 'package:flex_workplace/user_interface/components/custom_text_field.dart';
 import 'package:flex_workplace/user_interface/main_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -45,19 +46,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
               const SizedBox(height: 0),
-              SizedBox(
-                height: 35,
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: 'Digite seu nome de usuário aqui...',
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8)),
-                    fillColor: Colors.green,
-                    filled: true,
-                    isDense: true,
-                  ),
-                ),
-              ),
+            CustomTextField(hint: 'Digite seu nome de usuário aqui...'),
               const SizedBox(height: 20),
               Text(
                 'Informe o e-mail',
@@ -68,19 +57,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
               const SizedBox(height: 0),
-              SizedBox(
-                height: 35,
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: 'Digite seu e-mail aqui...',
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8)),
-                    fillColor: Colors.green,
-                    filled: true,
-                    isDense: true,
-                  ),
-                ),
-              ),
+            CustomTextField(hint: 'Digite seu e-mail aqui...'),
               const SizedBox(height: 20),
               Text(
                 'Crie uma senha',
@@ -91,19 +68,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
               const SizedBox(height: 0),
-              SizedBox(
-                height: 35,
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: 'Digite a sua criação de senha aqui...',
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8)),
-                    fillColor: Colors.green,
-                    filled: true,
-                    isDense: true,
-                  ),
-                ),
-              ),
+             CustomTextField(hint: 'Digite a sua criação de senha aqui...'),
               const SizedBox(height: 20),
               Text(
                 'Confirme a sua senha',
@@ -114,19 +79,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
               const SizedBox(height: 0),
-              SizedBox(
-                height: 35,
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: 'Digite a sua confirmaçâo de senha aqui...',
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8)),
-                    fillColor: Colors.green,
-                    filled: true,
-                    isDense: true,
-                  ),
-                ),
-              ),
+           CustomTextField(hint: 'Digite a sua confirmação de senha aqui...'),
               const SizedBox(height: 20),
               Text(
                 'QUAL SUA COR FAVORITA? (Pergunta de segurança)',
@@ -137,19 +90,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
               const SizedBox(height: 0),
-              SizedBox(
-                height: 35,
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: 'Digite aqui a sua resposta de segurança...',
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8)),
-                    fillColor: Colors.green,
-                    filled: true,
-                    isDense: true,
-                  ),
-                ),
-              ),
+              CustomTextField(hint: 'Digite aqui a sua resposta de segurança...'),
               const SizedBox(height: 50),
               ElevatedButton(
                 onPressed: () {
