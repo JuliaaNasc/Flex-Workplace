@@ -13,11 +13,11 @@ class Welcome extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('g4.png'),
-            Image.asset('wave_green.png'),
+            Image.asset('assets/g4.png'),
+            Image.asset('assets/wave_green.png'),
             const SizedBox(height: 20),
             SizedBox(
-              width: 130,
+              width: 160,
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(builder: (c) {
@@ -29,7 +29,11 @@ class Welcome extends StatelessWidget {
                         const Color.fromARGB(255, 12, 207, 18))),
                 child: const Text(
                   'Entrar',
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontFamily: 'Monserrat',
+                  ),
                 ),
               ),
             ),
@@ -45,7 +49,11 @@ class Welcome extends StatelessWidget {
                       const Color.fromARGB(255, 12, 207, 18))),
               child: const Text(
                 'Cadastrar-se',
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontFamily: 'Monserrat',
+                ),
               ),
             ),
           ],

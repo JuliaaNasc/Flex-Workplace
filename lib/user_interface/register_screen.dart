@@ -1,5 +1,5 @@
 import 'package:flex_workplace/user_interface/components/custom_text_field.dart';
-import 'package:flex_workplace/user_interface/main_screen.dart';
+import 'package:flex_workplace/user_interface/mains_screens/main_screen.dart';
 import 'package:flutter/material.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -18,7 +18,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const SizedBox(height: 10),
+              const SizedBox(height: 20),
               Text(
                 'Criar conta',
                 style: TextStyle(
@@ -46,7 +46,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
               const SizedBox(height: 0),
-            CustomTextField(hint: 'Digite seu nome de usuário aqui...'),
+              CustomTextField(hint: 'Digite seu nome de usuário aqui...'),
               const SizedBox(height: 20),
               Text(
                 'Informe o e-mail',
@@ -57,7 +57,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
               const SizedBox(height: 0),
-            CustomTextField(hint: 'Digite seu e-mail aqui...'),
+              CustomTextField(hint: 'Digite seu e-mail aqui...'),
               const SizedBox(height: 20),
               Text(
                 'Crie uma senha',
@@ -68,7 +68,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
               const SizedBox(height: 0),
-             CustomTextField(hint: 'Digite a sua criação de senha aqui...'),
+              CustomTextField(hint: 'Digite a sua criação de senha aqui...'),
               const SizedBox(height: 20),
               Text(
                 'Confirme a sua senha',
@@ -79,7 +79,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
               const SizedBox(height: 0),
-           CustomTextField(hint: 'Digite a sua confirmação de senha aqui...'),
+              CustomTextField(
+                  hint: 'Digite a sua confirmação de senha aqui...'),
               const SizedBox(height: 20),
               Text(
                 'QUAL SUA COR FAVORITA? (Pergunta de segurança)',
@@ -90,7 +91,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
               const SizedBox(height: 0),
-              CustomTextField(hint: 'Digite aqui a sua resposta de segurança...'),
+              CustomTextField(
+                  hint: 'Digite aqui a sua resposta de segurança...'),
               const SizedBox(height: 50),
               ElevatedButton(
                 onPressed: () {
@@ -104,7 +106,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     backgroundColor: MaterialStateProperty.all(Colors.black)),
                 child: const Text(
                   'CRIAR CONTA',
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'Monserrat',
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ],

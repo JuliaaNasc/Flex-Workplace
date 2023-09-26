@@ -12,13 +12,16 @@ class _UserScreenState extends State<UserScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(30),
-          child: Column(
-            children: [
-              Column(
+      body: Padding(
+        padding: EdgeInsets.all(10),
+        child: Column(
+          children: [
+            SingleChildScrollView(
+              child: Column(
                 children: [
+                  SizedBox(
+                    height: 20,
+                  ),
                   Align(
                     alignment: Alignment.centerLeft,
                     child: IconButton(
@@ -216,14 +219,15 @@ class _UserScreenState extends State<UserScreen> {
                   ),
                 ],
               ),
-              const SizedBox(height: 40),
-              Align(
-                child: Image.asset('g4.png', width: 100),
-                alignment: Alignment.centerLeft,
-              ),
-              Image.asset('wave_green.png'),
-            ],
-          ),
+            ),
+            const SizedBox(height: 40),
+            Expanded(child: SizedBox()),
+            Align(
+              child: Image.asset('assets/g4.png', width: 100),
+              alignment: Alignment.centerLeft,
+            ),
+            Image.asset('assets/wave_green.png'),
+          ],
         ),
       ),
     );

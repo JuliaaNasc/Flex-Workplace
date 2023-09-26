@@ -1,5 +1,5 @@
 import 'package:flex_workplace/user_interface/components/custom_text_field.dart';
-import 'package:flex_workplace/user_interface/main_screen.dart';
+import 'package:flex_workplace/user_interface/mains_screens/main_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'forgot_password.dart';
@@ -19,7 +19,7 @@ class _LoginScreenState extends State<LoginScreen> {
         padding: EdgeInsets.all(30),
         child: Column(
           children: [
-            const SizedBox(height: 30),
+            const SizedBox(height: 50),
             Text(
               'Acesse',
               style: TextStyle(
@@ -36,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 60),
             Text(
               'Digite seu e-mail',
               style: TextStyle(
@@ -46,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             const SizedBox(height: 10),
-          CustomTextField(hint: 'Digite seu e-mail aqui...'),
+            CustomTextField(hint: 'Digite seu e-mail aqui...'),
             const SizedBox(height: 20),
             Text(
               'Digite sua senha',
@@ -57,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             const SizedBox(height: 10),
-           CustomTextField(hint: 'Digite a sua senha aqui...'),
+            CustomTextField(hint: 'Digite a sua senha aqui...'),
             GestureDetector(
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (c) {
@@ -84,7 +84,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   backgroundColor: MaterialStateProperty.all(Colors.black)),
               child: const Text(
                 'LOGIN',
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Monserrat',
+                  fontSize: 20,
+                ),
               ),
             ),
           ],

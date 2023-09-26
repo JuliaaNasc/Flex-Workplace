@@ -1,7 +1,7 @@
 import 'package:flex_workplace/user_interface/components/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
-import 'main_screen.dart';
+import 'mains_screens/main_screen.dart';
 
 class ForgotPassword extends StatefulWidget {
   const ForgotPassword({super.key});

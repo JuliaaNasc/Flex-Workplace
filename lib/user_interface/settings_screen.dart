@@ -58,10 +58,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ),
               Expanded(child: SizedBox()),
               Align(
-                child: Image.asset('g4.png', width: 100),
+                child: Image.asset('assets/g4.png', width: 100),
                 alignment: Alignment.centerLeft,
               ),
-              Image.asset('wave_green.png'),
+              Image.asset('assets/wave_green.png'),
             ])));
   }
 }
