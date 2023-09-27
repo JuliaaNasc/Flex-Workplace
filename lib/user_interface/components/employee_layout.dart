@@ -40,7 +40,7 @@ class EmployeeLayout extends StatelessWidget {
               child: Text(
                 employee.name,
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 17,
                   fontFamily: 'Monteserrat',
                 ),
               ),

@@ -1,5 +1,6 @@
 import 'package:flex_workplace/models/employee.dart';
 import 'package:flex_workplace/models/sector.dart';
+import 'package:flex_workplace/user_interface/components/employee_layout.dart';
 import 'package:flex_workplace/user_interface/components/sector_title.dart';
 import 'package:flex_workplace/user_interface/mains_screens/tabs/employees/employees_controller.dart';
 import 'package:flutter/material.dart';
@@ -18,15 +19,14 @@ class _EmployeesScreenState extends State<EmployeesScreen> {
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-        child: Container(
-          child: Column(
-            children: [
-              SingleChildScrollView(
+        child: Column(
+          children: [
+            Expanded(
+              child: SingleChildScrollView(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const SizedBox(height: 10),
-                    SectorTitle(title: '  Comercial  '),
+                    SectorTitle(title: '  COMERCIAL  '),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ListView.builder(
@@ -36,11 +36,13 @@ class _EmployeesScreenState extends State<EmployeesScreen> {
                         itemBuilder: (context, index) {
                           Employee employee =
                               controller.employeesComercial[index];
+                          return EmployeeLayout(employee: employee);
                         },
                       ),
                     ),
-                    const SizedBox(height: 20),
-                    SectorTitle(title: '  Desenvolvimento  '),
+                    const SizedBox(height: 10),
+                    SectorTitle(title: '  DESENVOLVIMENTO  '),
+                    const SizedBox(height: 10),
                     Padding(
                         padding: EdgeInsets.all(8.0),
                         child: ListView.builder(
@@ -50,23 +52,52 @@ class _EmployeesScreenState extends State<EmployeesScreen> {
                           itemBuilder: (context, index) {
                             Employee employee =
                                 controller.employeesDesenvolvimento[index];
-                            return Text(employee.name);
+                            return EmployeeLayout(employee: employee);
                           },
                         )),
+                    const SizedBox(height: 10),
+                    SectorTitle(title: '  SUPORTE  '),
+                    const SizedBox(height: 10),
+                    Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: ListView.builder(
+                        shrinkWrap: true,
+                        primary: false,
+                        itemCount: controller.employeesSuporte.length,
+                        itemBuilder: (context, index) {
+                          Employee employee =
+                              controller.employeesSuporte[index];
+                          return EmployeeLayout(employee: employee);
+                        },
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    SectorTitle(title: '  FINANCEIRO  '),
+                    const SizedBox(height: 10),
+                    Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: ListView.builder(
+                        shrinkWrap: true,
+                        primary: false,
+                        itemCount: controller.employeesFinanceiro.length,
+                        itemBuilder: (context, index) {
+                          Employee employee =
+                              controller.employeesFinanceiro[index];
+                          return EmployeeLayout(employee: employee);
+                        },
+                      ),
+                    ),
+                    const SizedBox(height: 40),
+                    Align(
+                      child: Image.asset('assets/g4.png', width: 100),
+                      alignment: Alignment.centerLeft,
+                    ),
+                    Image.asset('assets/wave_green.png'),
                   ],
                 ),
               ),
-              Expanded(
-                child: SizedBox(),
-              ),
-              const SizedBox(height: 10),
-              Align(
-                child: Image.asset('assets/g4.png', width: 100),
-                alignment: Alignment.centerLeft,
-              ),
-              Image.asset('assets/wave_green.png'),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

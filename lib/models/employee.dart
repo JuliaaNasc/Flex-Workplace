@@ -1,4 +1,6 @@
 import 'package:flex_workplace/models/quafication.dart';
+import 'package:flex_workplace/models/sector.dart';
+import 'package:flex_workplace/models/subsector.dart';
 
 class Employee {
   String? photo;
@@ -8,8 +10,8 @@ class Employee {
   String description;
   String discord;
   String linkedin;
-  String sector;
-  String subSector;
+  List<Sector> sectors;
+  List<Subsector> subsectors;
   List<Qualification> qualification;
 
   Employee({
@@ -20,8 +22,8 @@ class Employee {
     required this.description,
     required this.discord,
     required this.linkedin,
-    required this.sector,
-    required this.subSector,
+    required this.sectors,
+    required this.subsectors,
     required this.qualification,
   });
 }
