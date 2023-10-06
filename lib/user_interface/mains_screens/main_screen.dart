@@ -93,7 +93,7 @@ class _MainScreenState extends State<MainScreen> {
                         ),
                       ),
                       const SizedBox(height: 25),
-                      TabBar(
+                     const TabBar(
                         isScrollable: true,
                         dividerColor: Colors.green,
                         indicatorColor: Colors.black,

@@ -46,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             const SizedBox(height: 10),
-            CustomTextField(hint: 'Digite seu e-mail aqui...'),
+            CustomTextField(hint: 'Digite seu e-mail aqui...', controller: TextEditingController(),),
             const SizedBox(height: 20),
             Text(
               'Digite sua senha',
@@ -57,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             const SizedBox(height: 10),
-            CustomTextField(hint: 'Digite a sua senha aqui...'),
+            CustomTextField(hint: 'Digite a sua senha aqui...', controller: TextEditingController(),),
             GestureDetector(
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (c) {

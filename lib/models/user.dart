@@ -2,7 +2,7 @@ class User {
   String name;
   String email;
   String? photo;
-  String id;
+  int id;
 
   User({
     required this.name,

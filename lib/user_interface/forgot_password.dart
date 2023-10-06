@@ -46,7 +46,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   ),
                 ),
                 const SizedBox(height: 0),
-                CustomTextField(hint: 'Digite seu e-mail aqui...'),
+                CustomTextField(hint: 'Digite seu e-mail aqui...', controller: TextEditingController(),),
                 const SizedBox(height: 20),
                 Text(
                   'Qual sua cor favorita? (Pergunta de segurança)',
@@ -57,7 +57,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   ),
                 ),
                 const SizedBox(height: 0),
-               CustomTextField(hint: 'Digite aqui a sua resposta de segurança...'),
+               CustomTextField(hint: 'Digite aqui a sua resposta de segurança...', controller: TextEditingController(),),
                 const SizedBox(height: 20),
                 Text(
                   'Digite sua nova senha',
@@ -68,7 +68,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   ),
                 ),
                 const SizedBox(height: 0),
-                CustomTextField(hint: 'Digite aqui a sua nova senha...'),
+                CustomTextField(hint: 'Digite aqui a sua nova senha...', controller: TextEditingController(),),
                 const SizedBox(height: 20),
                 Text(
                   'Confirme a sua nova senha definida',
@@ -79,7 +79,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   ),
                 ),
                 const SizedBox(height: 0),
-               CustomTextField(hint: 'Digite a sua confirmação de senha aqui...'),
+               CustomTextField(hint: 'Digite a sua confirmação de senha aqui...', controller: TextEditingController(),),
                 const SizedBox(height: 20),
                 const SizedBox(height: 50),
                 ElevatedButton(

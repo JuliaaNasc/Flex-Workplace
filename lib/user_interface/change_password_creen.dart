@@ -48,7 +48,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
               ),
             ),
             const SizedBox(height: 0),
-            CustomTextField(hint: 'Digite aqui a sua senha antiga...'),
+            CustomTextField(hint: 'Digite aqui a sua senha antiga...', controller: TextEditingController(),),
             const SizedBox(height: 0),
             GestureDetector(
               onTap: () {
@@ -72,7 +72,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
               ),
             ),
             const SizedBox(height: 0),
-            CustomTextField(hint: 'Digite aqui sua nova senha...'),
+            CustomTextField(hint: 'Digite aqui sua nova senha...', controller: TextEditingController(),),
             const SizedBox(height: 30),
             Text(
               'Digite novamente a sua nova senha',
@@ -83,7 +83,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
               ),
             ),
             const SizedBox(height: 0),
-            CustomTextField(hint: 'Digite aqui novamente a sua nova senha...'),
+            CustomTextField(hint: 'Digite aqui novamente a sua nova senha...', controller: TextEditingController(),),
             const SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {

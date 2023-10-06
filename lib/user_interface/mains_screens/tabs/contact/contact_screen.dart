@@ -86,6 +86,22 @@ class _ContactScreenState extends State<ContactScreen> {
                         ),
                         subtitle: Text('(85) 3033 1777'),
                       ),
+                       const SizedBox(height: 10),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.email,
+                          size: 35,
+                        ),
+                        title: Text(
+                          'E-MAIL ',
+                          style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        subtitle: Text('COMERCIAL@G4FLEX.COM.BR'),
+                      ),
                     ],
                   ),
                 ),
@@ -93,7 +109,7 @@ class _ContactScreenState extends State<ContactScreen> {
               Expanded(
                 child: SizedBox(),
               ),
-              const SizedBox(height: 100),
+              const SizedBox(height: 30),
               Align(
                 child: Image.asset('assets/g4.png', width: 100),
                 alignment: Alignment.centerLeft,

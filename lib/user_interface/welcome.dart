@@ -1,5 +1,5 @@
 import 'package:flex_workplace/user_interface/login_screen.dart';
-import 'package:flex_workplace/user_interface/register_screen.dart';
+import 'package:flex_workplace/user_interface/register/register_screen.dart';
 import 'package:flutter/material.dart';
 
 class Welcome extends StatelessWidget {

@@ -181,7 +181,7 @@ class EmployeesController {
   List<Employee> employeesFinanceiro = [
     Employee(
       photo: null,
-      name: ' Rodrigo Igor Louback',
+      name: ' Igor Louback',
       id: 'jewurywer',
       email: 'igor.louback@g4flex.com',
       description:

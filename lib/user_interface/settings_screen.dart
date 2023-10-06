@@ -50,7 +50,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                               MaterialStateProperty.all(Colors.white)),
                       child: const Text(
                         'Idioma do Aplicativo',
-                        style: TextStyle(color: Colors.black),
+                        style: TextStyle(color: Colors.black,
+                        fontSize: 20,
+                        ),
                       ),
                     ),
                   ),

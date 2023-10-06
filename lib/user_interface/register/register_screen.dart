@@ -1,5 +1,7 @@
+import 'package:flex_workplace/models/user.dart';
 import 'package:flex_workplace/user_interface/components/custom_text_field.dart';
 import 'package:flex_workplace/user_interface/mains_screens/main_screen.dart';
+import 'package:flex_workplace/user_interface/register/register_controller.dart';
 import 'package:flutter/material.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -10,6 +12,7 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
+  RegisterController controller = RegisterController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +22,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           child: Column(
             children: [
               const SizedBox(height: 20),
-              Text(
+              const Text(
                 'Criar conta',
                 style: TextStyle(
                   fontFamily: 'Montserrat',
@@ -28,7 +31,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
               const SizedBox(height: 0),
-              Text(
+              const Text(
                 'Seja muito bem - vindo!',
                 style: TextStyle(
                   fontFamily: 'Montserrat',
@@ -37,7 +40,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
               const SizedBox(height: 30),
-              Text(
+              const Text(
                 'Informe o nome de usuario',
                 style: TextStyle(
                   fontFamily: 'Montserrat',
@@ -46,9 +49,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
               const SizedBox(height: 0),
-              CustomTextField(hint: 'Digite seu nome de usuário aqui...'),
+              CustomTextField(
+                hint: 'Digite seu nome de usuário aqui...',
+                controller: controller.userName,
+              ),
               const SizedBox(height: 20),
-              Text(
+              const Text(
                 'Informe o e-mail',
                 style: TextStyle(
                   fontFamily: 'Montserrat',
@@ -57,9 +63,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
               const SizedBox(height: 0),
-              CustomTextField(hint: 'Digite seu e-mail aqui...'),
+              CustomTextField(
+                hint: 'Digite seu e-mail aqui...',
+                controller: controller.email,
+              ),
               const SizedBox(height: 20),
-              Text(
+              const Text(
                 'Crie uma senha',
                 style: TextStyle(
                   fontFamily: 'Montserrat',
@@ -68,9 +77,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
               const SizedBox(height: 0),
-              CustomTextField(hint: 'Digite a sua criação de senha aqui...'),
+              CustomTextField(
+                hint: 'Digite a sua criação de senha aqui...',
+                controller: controller.password,
+              ),
               const SizedBox(height: 20),
-              Text(
+              const Text(
                 'Confirme a sua senha',
                 style: TextStyle(
                   fontFamily: 'Montserrat',
@@ -80,9 +92,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
               const SizedBox(height: 0),
               CustomTextField(
-                  hint: 'Digite a sua confirmação de senha aqui...'),
+                hint: 'Digite a sua confirmação de senha aqui...',
+                controller: controller.passwordConfirmation,
+              ),
               const SizedBox(height: 20),
-              Text(
+              const Text(
                 'QUAL SUA COR FAVORITA? (Pergunta de segurança)',
                 style: TextStyle(
                   fontFamily: 'Montserrat',
@@ -92,15 +106,20 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
               const SizedBox(height: 0),
               CustomTextField(
-                  hint: 'Digite aqui a sua resposta de segurança...'),
+                hint: 'Digite aqui a sua resposta de segurança...',
+                controller: controller.favoriteColor,
+              ),
               const SizedBox(height: 50),
               ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (c) {
-                      return const MainScreen();
-                    },
-                  ));
+                onPressed: () async {
+                  User? user = await controller.createAccount();
+                  if (user != null) {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (c) {
+                        return const MainScreen();
+                      },
+                    ));
+                  }
                 },
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.black)),
